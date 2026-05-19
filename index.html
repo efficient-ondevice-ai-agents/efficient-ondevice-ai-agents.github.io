@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NeurIPS 2026 Workshop on Efficient and On-Device AI Agents — Sydney, Australia, December 11–12, 2026. Bridging model efficiency and agentic AI for real-world edge deployment.">
+  <meta name="keywords" content="NeurIPS 2026, workshop, on-device AI, efficient AI, AI agents, edge AI, mobile AI, on-device agents, NeurIPS workshop">
+  <meta property="og:title" content="Efficient and On-Device AI Agents — NeurIPS 2026 Workshop">
+  <meta property="og:description" content="Can AI agents run on your phone? Efficient architectures, on-device reasoning, and multi-agent systems for real-world edge deployment.">
+  <meta property="og:type" content="website">
+  <title>Efficient and On-Device AI Agents — NeurIPS 2026 Workshop</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!-- Google Fonts: Inter + Open Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip to content (accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#hero">Efficient and On-Device AI Agents @ NeurIPS 2026</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#topics">Topics</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cfp">Call for Papers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+          <li class="nav-item"><a class="nav-link" href="#organizers">Organizers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="main-content">
+
+    <!-- ============================================================
+         §1 HERO / BANNER
+    ============================================================ -->
+    <section id="hero" aria-label="Workshop banner">
+      <div class="hero-content text-center text-white">
+        <h1>Efficient and On-Device AI Agents</h1>
+        <p class="hero-subtitle">NeurIPS 2026 Workshop &middot; Sydney, Australia</p>
+        <p class="hero-tagline">
+          "Can AI agents run on your phone? Efficient architectures, on-device reasoning,
+          and multi-agent systems for real-world edge deployment."
+        </p>
+        <div class="hero-date">
+          <i class="fa-regular fa-calendar me-1" aria-hidden="true"></i>
+          December 11–12, 2026
+        </div>
+        <div class="hero-buttons">
+          <a href="#schedule" class="btn btn-outline-light">
+            <i class="fa-regular fa-clock me-1" aria-hidden="true"></i>Schedule
+          </a>
+          <a href="#cfp" class="btn btn-outline-light">
+            <i class="fa-solid fa-file-lines me-1" aria-hidden="true"></i>Call for Papers
+          </a>
+          <a href="#" class="btn btn-outline-light" target="_blank" rel="noopener noreferrer"
+             aria-label="Submit on OpenReview (opens in new tab)">
+            <i class="fa-solid fa-arrow-up-right-from-square me-1" aria-hidden="true"></i>OpenReview
+          </a>
+        </div>
+        <p class="hero-contact">
+          <i class="fa-regular fa-envelope me-1" aria-hidden="true"></i>
+          <a href="mailto:ondevice-agents-neurips2026@googlegroups.com">
+            ondevice-agents-neurips2026@googlegroups.com
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NEWS
+    ============================================================ -->
+    <section id="news" class="section-gray" aria-labelledby="news-heading">
+      <div class="container" style="max-width: 900px;">
+        <h2 id="news-heading" class="section-title">News</h2>
+        <ul class="news-list" aria-label="Workshop news and updates">
+          <li class="news-item">
+            <span class="news-date">May 2026</span>
+            <span class="news-text">
+              <strong>Website launched.</strong> The workshop website is now live.
+              Stay tuned for updates on invited speakers, the submission portal, and schedule.
+            </span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">Aug 1, 2026</span>
+            <span class="news-text">
+              <strong>Call for Papers opens</strong> — submission portal will be available on OpenReview.
+              See the <a href="#cfp">Call for Papers</a> section for topics and guidelines.
+            </span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">Sep 5, 2026</span>
+            <span class="news-text">
+              <strong>Submission deadline.</strong> All papers due by 11:59 PM AoE.
+            </span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">Dec 11–12, 2026</span>
+            <span class="news-text">
+              <strong>Workshop at NeurIPS 2026</strong> — Sydney, Australia.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         §2 ABOUT
+    ============================================================ -->
+    <section id="about" class="section-white" aria-labelledby="about-heading">
+      <div class="container" style="max-width: 900px;">
+        <h2 id="about-heading" class="section-title">About</h2>
+
+        <p>
+          AI agents — systems that perceive, reason, plan, and act autonomously — have advanced
+          dramatically with the rise of large language models. Yet the dominant paradigm relies on
+          powerful cloud infrastructure, creating fundamental barriers to real-world deployment:
+          latency, privacy exposure, connectivity dependence, and prohibitive energy costs. At the
+          same time, the on-device ML community has developed a rich toolkit of compression,
+          quantization, and efficient inference techniques — but largely without the agentic use
+          case in mind.
+        </p>
+        <p>
+          This workshop brings together these two communities to address a timely and underexplored
+          question: <strong>how do we build AI agents that run efficiently on resource-constrained
+          hardware</strong> — smartphones, laptops, wearables, robots, and embedded systems?
+        </p>
+
+        <h3 class="mt-4 mb-3" style="font-size: 1.15rem; color: var(--primary);">Why Now?</h3>
+        <ul class="mb-4">
+          <li><strong>Inflection point:</strong> Small language models (SLMs) such as Phi-3, Gemini Nano,
+            and Llama 3.2 have crossed a capability threshold that makes on-device agentic behavior
+            plausible for the first time.</li>
+          <li><strong>On-device AI products:</strong> Apple Intelligence, Qualcomm AI Hub, and Google's
+            on-device Gemini demonstrate strong industry momentum — but agentic capabilities remain
+            largely cloud-dependent.</li>
+          <li><strong>Regulatory pressure:</strong> The EU AI Act and emerging data-sovereignty regulations
+            create strong incentives for local, privacy-preserving inference.</li>
+        </ul>
+
+        <h3 class="mt-4 mb-3" style="font-size: 1.15rem; color: var(--primary);">Key Open Problems</h3>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="workshop-card" style="border-left: 4px solid var(--primary);">
+              <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-microchip me-2" aria-hidden="true"></i>Architecture Design
+              </h4>
+              <p class="mb-0" style="font-size: 0.9rem; color: var(--text-muted);">
+                How do we design agent architectures — memory, planning, tool use — that fit within
+                the strict compute and memory budgets of edge devices?
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="workshop-card" style="border-left: 4px solid var(--primary);">
+              <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-chart-bar me-2" aria-hidden="true"></i>Evaluation &amp; Benchmarks
+              </h4>
+              <p class="mb-0" style="font-size: 0.9rem; color: var(--text-muted);">
+                Existing benchmarks (WebArena, OSWorld, AgentBench) assume cloud-scale models.
+                How do we evaluate agents under real hardware constraints?
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="workshop-card" style="border-left: 4px solid var(--primary);">
+              <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-network-wired me-2" aria-hidden="true"></i>Multi-Agent Coordination
+              </h4>
+              <p class="mb-0" style="font-size: 0.9rem; color: var(--text-muted);">
+                When multiple small agents collaborate on a device or across a local network,
+                how do we orchestrate them efficiently without a central cloud coordinator?
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="workshop-card" style="border-left: 4px solid var(--primary);">
+              <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-shield-halved me-2" aria-hidden="true"></i>Privacy &amp; Security
+              </h4>
+              <p class="mb-0" style="font-size: 0.9rem; color: var(--text-muted);">
+                On-device agents handle sensitive personal data. What are the unique privacy and
+                adversarial robustness challenges at the edge?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         §3 TOPICS OF INTEREST
+    ============================================================ -->
+    <section id="topics" class="section-light" aria-labelledby="topics-heading">
+      <div class="container" style="max-width: 900px;">
+        <h2 id="topics-heading" class="section-title">Topics of Interest</h2>
+        <p class="section-subtitle">We welcome submissions on (but not limited to) the following topics</p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <ul style="font-size: 0.95rem; line-height: 1.5; padding-left: 1.25rem;">
+              <li class="mb-3"><strong>Efficient model architectures for on-device agents</strong> — quantization, pruning, knowledge distillation, and small language models (SLMs) tailored for agentic tasks on resource-constrained hardware.</li>
+              <li class="mb-3"><strong>Training and fine-tuning under constraints</strong> — reinforcement learning, instruction tuning, and parameter-efficient fine-tuning methods adapted for edge deployment scenarios.</li>
+              <li class="mb-3"><strong>Efficient reasoning and planning</strong> — chain-of-thought compression, early exit strategies, speculative decoding, and lightweight planning algorithms for on-device agents.</li>
+              <li class="mb-3"><strong>Memory management and context compression</strong> — KV-cache optimization, retrieval-augmented generation (RAG) at the edge, and long-context compression for memory-limited devices.</li>
+              <li class="mb-3"><strong>Multi-agent orchestration on-device</strong> — coordination protocols, task decomposition, and communication-efficient frameworks for multiple agents running on local hardware.</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul style="font-size: 0.95rem; line-height: 1.5; padding-left: 1.25rem;">
+              <li class="mb-3"><strong>Tool use and function calling under latency constraints</strong> — efficient tool selection, API call batching, and latency-aware function calling under strict response-time budgets.</li>
+              <li class="mb-3"><strong>Benchmarks and evaluation</strong> — new benchmarks and evaluation protocols for on-device agents, extending WebArena, OSWorld, and AgentBench to hardware-constrained settings.</li>
+              <li class="mb-3"><strong>Privacy-preserving and secure on-device agents</strong> — differential privacy, federated learning, adversarial robustness, and data-sovereignty techniques for agents handling sensitive personal data.</li>
+              <li class="mb-3"><strong>Real-world applications</strong> — deployed systems and case studies in mobile, robotics, wearables, automotive, and IoT domains where on-device agents provide tangible value.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         §4 CALL FOR PAPERS
+    ============================================================ -->
+    <section id="cfp" class="section-white" aria-labelledby="cfp-heading">
+      <div class="container">
+        <h2 id="cfp-heading" class="section-title">Call for Papers</h2>
+        <p class="section-subtitle">We invite submissions on all aspects of efficient and on-device AI agents</p>
+
+        <!-- Timeline -->
+        <h3 class="mb-3" style="font-size: 1.05rem; font-family: var(--font-heading); color: var(--text);">
+          Key Dates
+        </h3>
+        <div class="timeline" role="list" aria-label="Key dates timeline">
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">1</div>
+            <div class="timeline-date">Aug 1</div>
+            <div class="timeline-label">CFP Opens</div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">2</div>
+            <div class="timeline-date">Sep 5</div>
+            <div class="timeline-label">Submission Deadline</div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">3</div>
+            <div class="timeline-date">Sep 26</div>
+            <div class="timeline-label">Notification of Acceptance</div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">4</div>
+            <div class="timeline-date">Oct 10</div>
+            <div class="timeline-label">Camera-Ready Deadline</div>
+          </div>
+          <div class="timeline-item" role="listitem">
+            <div class="timeline-dot" aria-hidden="true">5</div>
+            <div class="timeline-date">Dec 11–12</div>
+            <div class="timeline-label">Workshop at NeurIPS 2026</div>
+          </div>
+        </div>
+
+        <!-- Submission formats -->
+        <h3 class="mb-3" style="font-size: 1.05rem; font-family: var(--font-heading); color: var(--text);">
+          Submission Formats
+        </h3>
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <div class="workshop-card text-center">
+              <div style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;" aria-hidden="true">
+                <i class="fa-regular fa-file-lines"></i>
+              </div>
+              <h4 style="font-size: 1.05rem; color: var(--primary);">Short Paper</h4>
+              <p style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem;">4 pages</p>
+              <p class="mb-0" style="font-size: 0.875rem; color: var(--text-muted);">+ unlimited references</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="workshop-card text-center">
+              <div style="font-size: 2rem; color: var(--primary); margin-bottom: 0.5rem;" aria-hidden="true">
+                <i class="fa-regular fa-file"></i>
+              </div>
+              <h4 style="font-size: 1.05rem; color: var(--primary);">Long Paper</h4>
+              <p style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.25rem;">9 pages</p>
+              <p class="mb-0" style="font-size: 0.875rem; color: var(--text-muted);">+ unlimited references</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submission guidelines -->
+        <h3 class="mb-3" style="font-size: 1.05rem; font-family: var(--font-heading); color: var(--text);">
+          Submission Guidelines
+        </h3>
+        <ul class="mb-4" style="font-size: 0.95rem; line-height: 1.8;">
+          <li><strong>Double-blind review:</strong> Submissions must be anonymized. Author names and affiliations should not appear in the paper.</li>
+          <li><strong>Platform:</strong> All submissions via <a href="#" rel="noopener noreferrer">OpenReview</a>. Each paper will receive at least 2–3 reviews.</li>
+          <li><strong>Non-archival:</strong> Workshop papers are non-archival. Accepted papers may be submitted to venues with archival proceedings.</li>
+          <li><strong>Concurrent submissions:</strong> Papers under review at other venues are welcome, subject to those venues' policies.</li>
+          <li><strong>LLM disclosure:</strong> Authors must disclose any use of large language models in the writing process, per NeurIPS 2026 guidelines.</li>
+          <li><strong>Format:</strong> Use the official NeurIPS 2026 LaTeX style file.</li>
+        </ul>
+
+        <!-- Oral presentation callout -->
+        <div class="callout callout-green">
+          <div class="callout-title">
+            <i class="fa-solid fa-microphone-lines me-1" aria-hidden="true"></i>
+            Oral Contributed Presentations
+          </div>
+          <p class="mb-0" style="font-size: 0.9rem;">
+            The best submissions will be invited for an <strong>oral contributed presentation</strong>
+            at the workshop. Selection is based on novelty, technical quality, and relevance
+            to the workshop's core themes.
+          </p>
+        </div>
+
+        <!-- Submit button -->
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-lg" style="background-color: var(--primary); color: #fff; font-family: var(--font-heading); font-weight: 600; padding: 0.7rem 2rem; border-radius: 6px;"
+             aria-label="Submit paper on OpenReview (link coming soon)">
+            <i class="fa-solid fa-arrow-up-right-from-square me-2" aria-hidden="true"></i>
+            Submit on OpenReview
+          </a>
+          <p class="mt-2" style="font-size: 0.85rem; color: var(--text-muted);">
+            Submission portal opens August 1, 2026
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         §5 INVITED SPEAKERS
+    ============================================================ -->
+    <section id="speakers" class="section-light" aria-labelledby="speakers-heading">
+      <div class="container">
+        <h2 id="speakers-heading" class="section-title">Invited Speakers</h2>
+        <p class="section-subtitle">
+          Invited speakers will be announced. We are in the process of confirming leading
+          researchers from both the efficiency and agentic AI communities.
+        </p>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-gray" aria-label="Speaker photo placeholder">TBA</div>
+              <div class="person-name">Speaker TBA</div>
+              <div class="person-affil">To be announced</div>
+              <div class="person-role">Invited Speaker</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-gray" aria-label="Speaker photo placeholder">TBA</div>
+              <div class="person-name">Speaker TBA</div>
+              <div class="person-affil">To be announced</div>
+              <div class="person-role">Invited Speaker</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-gray" aria-label="Speaker photo placeholder">TBA</div>
+              <div class="person-name">Speaker TBA</div>
+              <div class="person-affil">To be announced</div>
+              <div class="person-role">Invited Speaker</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-gray" aria-label="Speaker photo placeholder">TBA</div>
+              <div class="person-name">Speaker TBA</div>
+              <div class="person-affil">To be announced</div>
+              <div class="person-role">Invited Speaker</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-gray" aria-label="Speaker photo placeholder">TBA</div>
+              <div class="person-name">Speaker TBA</div>
+              <div class="person-affil">To be announced</div>
+              <div class="person-role">Invited Speaker</div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-gray" aria-label="Speaker photo placeholder">TBA</div>
+              <div class="person-name">Speaker TBA</div>
+              <div class="person-affil">To be announced</div>
+              <div class="person-role">Invited Speaker</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         §6 WORKSHOP SCHEDULE
+    ============================================================ -->
+    <section id="schedule" class="section-gray" aria-labelledby="schedule-heading">
+      <div class="container">
+        <h2 id="schedule-heading" class="section-title">Workshop Schedule</h2>
+        <p class="section-subtitle">Full-day workshop — December 11 or 12, 2026 · Sydney, Australia</p>
+
+        <div class="row g-4 mb-4">
+
+          <!-- Morning -->
+          <div class="col-md-6">
+            <h3 class="mb-3" style="font-size: 1.05rem; font-family: var(--font-heading); color: var(--primary);">
+              <i class="fa-regular fa-sun me-2" aria-hidden="true"></i>Morning Session
+            </h3>
+            <table class="schedule-table" aria-label="Morning schedule">
+              <thead>
+                <tr>
+                  <th class="time-col">Time</th>
+                  <th>Activity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-talk">
+                  <td class="time-col">09:00–09:10</td>
+                  <td>Opening Remarks</td>
+                </tr>
+                <tr class="row-talk">
+                  <td class="time-col">09:10–09:50</td>
+                  <td>Invited Talk 1</td>
+                </tr>
+                <tr class="row-talk">
+                  <td class="time-col">09:50–10:30</td>
+                  <td>Invited Talk 2</td>
+                </tr>
+                <tr class="row-break">
+                  <td class="time-col">10:30–11:30</td>
+                  <td>Coffee Break + Poster Session 1</td>
+                </tr>
+                <tr class="row-talk">
+                  <td class="time-col">11:30–12:10</td>
+                  <td>Invited Talk 3</td>
+                </tr>
+                <tr class="row-special">
+                  <td class="time-col">12:10–12:30</td>
+                  <td><strong>"Open Problems" Lightning Round</strong></td>
+                </tr>
+                <tr class="row-lunch">
+                  <td class="time-col">12:30–13:30</td>
+                  <td>Lunch Break</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Afternoon -->
+          <div class="col-md-6">
+            <h3 class="mb-3" style="font-size: 1.05rem; font-family: var(--font-heading); color: var(--primary);">
+              <i class="fa-regular fa-moon me-2" aria-hidden="true"></i>Afternoon Session
+            </h3>
+            <table class="schedule-table" aria-label="Afternoon schedule">
+              <thead>
+                <tr>
+                  <th class="time-col">Time</th>
+                  <th>Activity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-talk">
+                  <td class="time-col">13:30–14:10</td>
+                  <td>Invited Talk 4</td>
+                </tr>
+                <tr class="row-talk">
+                  <td class="time-col">14:10–15:10</td>
+                  <td>Contributed Spotlight Talks <span style="color: var(--text-muted); font-size: 0.85em;">(6 × 10 min)</span></td>
+                </tr>
+                <tr class="row-break">
+                  <td class="time-col">15:10–16:10</td>
+                  <td>Coffee Break + Poster Session 2</td>
+                </tr>
+                <tr class="row-talk">
+                  <td class="time-col">16:10–16:50</td>
+                  <td>Invited Talk 5</td>
+                </tr>
+                <tr class="row-debate">
+                  <td class="time-col">16:50–17:20</td>
+                  <td><strong>Structured Debate Panel</strong></td>
+                </tr>
+                <tr class="row-talk">
+                  <td class="time-col">17:20–17:30</td>
+                  <td>Closing Remarks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Unique format callout boxes -->
+        <div class="row g-3 mt-2">
+          <div class="col-md-6">
+            <div class="callout callout-green">
+              <div class="callout-title">
+                <i class="fa-solid fa-bolt me-1" aria-hidden="true"></i>
+                "Open Problems" Lightning Round
+              </div>
+              <p class="mb-0" style="font-size: 0.9rem;">
+                Five 4-minute talks presenting <em>unsolved problems</em> — not solutions.
+                Speakers are invited to articulate the hardest open questions in efficient
+                on-device agentic AI, sparking discussion and future collaboration.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="callout callout-yellow">
+              <div class="callout-title">
+                <i class="fa-solid fa-comments me-1" aria-hidden="true"></i>
+                Structured Debate Panel
+              </div>
+              <p class="mb-0" style="font-size: 0.9rem;">
+                Two teams argue opposing positions on a central question in the field
+                (e.g., "On-device agents will surpass cloud agents within 5 years").
+                A structured format with opening statements, rebuttals, and audience vote.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         §7 ORGANIZERS
+    ============================================================ -->
+    <section id="organizers" class="section-white" aria-labelledby="organizers-heading">
+      <div class="container">
+        <h2 id="organizers-heading" class="section-title">Organizers</h2>
+        <p class="section-subtitle">A diverse team spanning industry and academia across three continents</p>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+          <!-- Davide Belli — real photo -->
+          <div class="col">
+            <div class="person-card">
+              <img src="img/organizers/davide-belli.jpg"
+                   alt="Davide Belli"
+                   class="person-photo"
+                   width="120" height="120">
+              <div class="person-name">Davide Belli</div>
+              <div class="person-affil">Qualcomm AI Research, Europe</div>
+              <div class="person-role">Staff Research Scientist</div>
+              <p class="person-bio">
+                Staff Research Scientist at Qualcomm AI Research working on large language
+                models, agentic AI, and graph neural networks. His research targets efficient
+                on-device AI, combining model compression with agentic capabilities for
+                edge deployment.
+              </p>
+              <div class="person-links">
+                <a href="https://scholar.google.com/citations?user=HDQVaG0AAAAJ&hl=en"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Davide Belli on Google Scholar">
+                  <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Asim Munawar -->
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-blue" aria-label="Asim Munawar photo placeholder">AM</div>
+              <div class="person-name">Asim Munawar</div>
+              <div class="person-affil">IBM Research, US</div>
+              <div class="person-role">Team Lead, Agentic AI</div>
+              <p class="person-bio">
+                Research scientist at IBM Research specializing in machine learning,
+                neuro-symbolic AI, and reinforcement learning. His work focuses on
+                enterprise-grade agentic AI systems, including contributions to the
+                Granite model family and neuro-symbolic reasoning frameworks.
+              </p>
+              <div class="person-links">
+                <a href="https://scholar.google.co.jp/citations?user=avAL9xYAAAAJ&hl=en"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Asim Munawar on Google Scholar">
+                  <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yuanchun Li -->
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-teal" aria-label="Yuanchun Li photo placeholder">YL</div>
+              <div class="person-name">Yuanchun Li</div>
+              <div class="person-affil">Tsinghua University, China</div>
+              <div class="person-role">Assistant Professor</div>
+              <p class="person-bio">
+                Assistant Professor at the Institute for AI Industry Research (AIR), Tsinghua
+                University, specializing in mobile computing and on-device AI. His research
+                on resource-efficient LLMs — including LLM-Explorer and BudgetThinker —
+                addresses deploying capable language models on constrained hardware.
+              </p>
+              <div class="person-links">
+                <a href="https://scholar.google.com/citations?hl=en&user=B3hg7BgAAAAJ"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Yuanchun Li on Google Scholar">
+                  <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weiwen Liu -->
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-purple" aria-label="Weiwen Liu photo placeholder">WL</div>
+              <div class="person-name">Weiwen Liu</div>
+              <div class="person-affil">Shanghai University, China</div>
+              <div class="person-role">Associate Professor</div>
+              <p class="person-bio">
+                Associate Professor at Shanghai University working on large language models,
+                AI agents, and recommender systems. Her research on tool-augmented agents —
+                including Tool-ACE and ACEBench — advances function calling and tool use
+                for LLM-based agents.
+              </p>
+              <div class="person-links">
+                <a href="https://scholar.google.com/citations?hl=en&user=C7UzRGgAAAAJ"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Weiwen Liu on Google Scholar">
+                  <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weiwei Sun -->
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-green" aria-label="Weiwei Sun photo placeholder">WS</div>
+              <div class="person-name">Weiwei Sun</div>
+              <div class="person-affil">Carnegie Mellon University, US</div>
+              <div class="person-role">PhD Student</div>
+              <p class="person-bio">
+                PhD student at Carnegie Mellon University working on machine learning,
+                information retrieval, and natural language processing, with a focus on
+                long-horizon agentic systems. His research on context folding enables agents
+                to reason efficiently over extended interaction histories.
+              </p>
+              <div class="person-links">
+                <a href="https://scholar.google.com/citations?hl=en&user=hdUZbxgAAAAJ"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Weiwei Sun on Google Scholar">
+                  <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ruisi Cai -->
+          <div class="col">
+            <div class="person-card">
+              <div class="person-avatar avatar-red" aria-label="Ruisi Cai photo placeholder">RC</div>
+              <div class="person-name">Ruisi Cai</div>
+              <div class="person-affil">University of Texas at Austin, US</div>
+              <div class="person-role">PhD Student</div>
+              <p class="person-bio">
+                PhD student at the University of Texas at Austin working on machine learning,
+                computer vision, and efficient inference for large language models. Her
+                research on structured pruning, quantization, and compression targets
+                deployment of LLMs and agentic systems under real-world resource constraints.
+              </p>
+              <div class="person-links">
+                <a href="https://scholar.google.com/citations?hl=en&user=B0chY1AAAAAJ"
+                   target="_blank" rel="noopener noreferrer"
+                   aria-label="Ruisi Cai on Google Scholar">
+                  <i class="fa-brands fa-google-scholar" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         §8 PROGRAM COMMITTEE
+    ============================================================ -->
+    <section id="pc" class="section-light" aria-labelledby="pc-heading">
+      <div class="container">
+        <h2 id="pc-heading" class="section-title">Program Committee</h2>
+        <p class="section-subtitle">
+          We thank the following researchers for serving on the program committee.
+        </p>
+
+        <div class="pc-grid" role="list" aria-label="Program committee members">
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Corrado Rainone</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Bence Major</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Amir Jalalirad</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Tribhuvanesh Orekondy</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Thomas Hehn</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Gabriele Cesa</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Fabio Valerio Massoli</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Andrey Kuzmin</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Kumar Pratik</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Aleix Torres</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Arnaud Padres</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Alex Battle</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Victor Conchello Vendrell</span>
+            <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Contact -->
+        <div class="col-md-4">
+          <div class="footer-title">Contact</div>
+          <p style="color: rgba(255,255,255,0.75); font-size: 0.875rem; margin-bottom: 0.5rem;">
+            For inquiries, please reach out via email:
+          </p>
+          <a href="mailto:ondevice-agents-neurips2026@googlegroups.com"
+             style="font-size: 0.875rem;">
+            <i class="fa-regular fa-envelope me-1" aria-hidden="true"></i>
+            ondevice-agents-neurips2026@googlegroups.com
+          </a>
+        </div>
+
+        <!-- Links -->
+        <div class="col-md-4">
+          <div class="footer-title">Links</div>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.875rem;">
+            <li class="mb-1">
+              <a href="#" aria-label="OpenReview submission portal (coming soon)">
+                <i class="fa-solid fa-arrow-up-right-from-square me-1" aria-hidden="true"></i>
+                OpenReview (coming soon)
+              </a>
+            </li>
+            <li class="mb-1">
+              <a href="https://neurips.cc/Conferences/2026" target="_blank" rel="noopener noreferrer"
+                 aria-label="NeurIPS 2026 conference website (opens in new tab)">
+                <i class="fa-solid fa-arrow-up-right-from-square me-1" aria-hidden="true"></i>
+                NeurIPS 2026
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Copyright & notice -->
+        <div class="col-md-4">
+          <div class="footer-title">Workshop Papers</div>
+          <p style="color: rgba(255,255,255,0.75); font-size: 0.875rem; margin-bottom: 0.5rem;">
+            Workshop papers are <strong style="color: rgba(255,255,255,0.9);">non-archival</strong>.
+            Accepted papers may be submitted to venues with archival proceedings.
+          </p>
+        </div>
+
+      </div>
+
+      <hr style="border-color: rgba(255,255,255,0.15); margin: 1.5rem 0 1rem;">
+
+      <div class="text-center" style="font-size: 0.8rem; color: rgba(255,255,255,0.55);">
+        &copy; 2026 Efficient and On-Device AI Agents Workshop Organizers &middot;
+        NeurIPS 2026 &middot; Sydney, Australia
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmFXFMrWCU3FA0e6bMkHHenwMKmX" crossorigin="anonymous"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

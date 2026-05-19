@@ -1,0 +1,793 @@
+/* ============================================================
+   Efficient and On-Device AI Agents — NeurIPS 2026 Workshop
+   Custom Stylesheet
+   ============================================================ */
+
+/* ---- CSS Custom Properties ---- */
+:root {
+  /* Colors — derived from proposal's LaTeX color definitions */
+  --primary:        #3465A4;   /* headerblue: RGB(52, 101, 164) */
+  --primary-dark:   #1e3f6e;   /* darker shade for footer/hover */
+  --primary-light:  #e8f0fb;   /* light blue tint for alt sections */
+  --primary-hover:  #2a539e;   /* button/link hover */
+  --confirmed:      #00823C;   /* darkgreen: RGB(0, 130, 60) */
+  --pending:        #B48C00;   /* darkyellow: RGB(180, 140, 0) */
+  --text:           #1a1a2e;   /* near-black body text */
+  --text-muted:     #5a6a7e;   /* muted/secondary text */
+  --bg-white:       #ffffff;
+  --bg-gray:        #f4f6f9;
+  --border-color:   #dee2e6;
+  --card-shadow:    0 2px 8px rgba(52, 101, 164, 0.10);
+  --card-shadow-hover: 0 6px 20px rgba(52, 101, 164, 0.18);
+
+  /* Typography */
+  --font-heading:   'Inter', system-ui, -apple-system, sans-serif;
+  --font-body:      'Open Sans', system-ui, -apple-system, sans-serif;
+
+  /* Spacing */
+  --section-py:     3.5rem;
+  --navbar-height:  64px;
+}
+
+/* ---- Base Reset & Typography ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  background-color: var(--bg-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* ---- Accessibility: Skip Link ---- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 4px 4px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+#navbar {
+  background-color: var(--primary);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: padding 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#navbar.navbar-shrunk {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+#navbar .navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  color: #fff;
+}
+
+#navbar .nav-link {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.88);
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+#navbar .nav-link:hover,
+#navbar .nav-link:focus {
+  color: #fff;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+#hero {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--navbar-height);
+  background-image: url('../img/hero-bg.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  /* Fallback gradient if image fails to load */
+  background-color: var(--primary-dark);
+}
+
+/* Dark overlay */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content .hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.hero-content .hero-tagline {
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.82);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-content .hero-date {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #fff;
+  padding: 0.35rem 1rem;
+  border-radius: 2rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(4px);
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.hero-buttons .btn {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.hero-buttons .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.hero-contact {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+.hero-contact a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.hero-contact a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ============================================================
+   SECTION BACKGROUNDS
+   ============================================================ */
+.section-white {
+  background-color: var(--bg-white);
+  padding: var(--section-py) 0;
+}
+
+.section-light {
+  background-color: var(--primary-light);
+  padding: var(--section-py) 0;
+}
+
+.section-gray {
+  background-color: var(--bg-gray);
+  padding: var(--section-py) 0;
+}
+
+/* ============================================================
+   SECTION TITLES
+   ============================================================ */
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   CARDS (shared base)
+   ============================================================ */
+.workshop-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workshop-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* ============================================================
+   PERSON CARDS (speakers, organizers)
+   ============================================================ */
+.person-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  height: 100%;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Circular photo */
+.person-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-light);
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+/* CSS placeholder avatar (for organizers/speakers without photos) */
+.person-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #fff;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+/* Avatar color palette */
+.avatar-blue   { background-color: #3465A4; }
+.avatar-teal   { background-color: #0d7377; }
+.avatar-green  { background-color: #2d6a4f; }
+.avatar-purple { background-color: #5e3a8c; }
+.avatar-red    { background-color: #9b2335; }
+.avatar-orange { background-color: #b5451b; }
+.avatar-gray   { background-color: #6c757d; }
+
+.person-name {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.person-affil {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.person-role {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.person-bio {
+  font-size: 0.875rem;
+  color: var(--text);
+  text-align: left;
+  line-height: 1.6;
+}
+
+.person-links {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.person-links a {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.person-links a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* ============================================================
+   TOPIC CARDS
+   ============================================================ */
+.topic-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1.25rem 1rem;
+  height: 100%;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 4px solid var(--primary);
+}
+
+.topic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.topic-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 0.6rem;
+  flex-shrink: 0;
+}
+
+.topic-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.topic-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   SCHEDULE TABLE
+   ============================================================ */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.schedule-table th {
+  background-color: var(--primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+}
+
+.schedule-table td {
+  padding: 0.55rem 0.75rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-table .time-col {
+  white-space: nowrap;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--primary);
+  width: 110px;
+}
+
+/* Row type color coding */
+.row-talk    { background-color: #eef3fb; }
+.row-break   { background-color: #f4f6f9; color: var(--text-muted); }
+.row-special { background-color: #edf7f0; }
+.row-debate  { background-color: #fdf8e8; }
+.row-lunch   { background-color: #f4f6f9; color: var(--text-muted); }
+
+/* ============================================================
+   TIMELINE (Call for Papers dates)
+   ============================================================ */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin: 2rem 0 3rem;
+  padding: 0 1rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 2rem;
+  right: 2rem;
+  height: 3px;
+  background: var(--primary-light);
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 3px solid var(--bg-white);
+  box-shadow: 0 0 0 3px var(--primary);
+}
+
+.timeline-date {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+
+.timeline-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  max-width: 90px;
+  line-height: 1.3;
+}
+
+/* Mobile: vertical timeline */
+@media (max-width: 767px) {
+  .timeline {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 0 0 2rem;
+  }
+  .timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    right: auto;
+    width: 3px;
+    height: auto;
+  }
+  .timeline-item {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  .timeline-dot {
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+  .timeline-label {
+    max-width: none;
+  }
+}
+
+/* ============================================================
+   NEWS SECTION
+   ============================================================ */
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.news-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--primary);
+  white-space: nowrap;
+  min-width: 90px;
+  flex-shrink: 0;
+}
+
+.news-text {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.news-text a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ============================================================
+   PROGRAM COMMITTEE GRID
+   ============================================================ */
+.pc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.pc-pill {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.pc-pill:hover {
+  background: var(--primary-light);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(52, 101, 164, 0.12);
+}
+
+.pc-pill .pc-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--text);
+  display: block;
+  font-size: 0.9rem;
+}
+
+.pc-pill .pc-affil {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* ============================================================
+   CALLOUT BOXES
+   ============================================================ */
+.callout {
+  border-left: 4px solid var(--primary);
+  background: var(--primary-light);
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.callout-green {
+  border-left-color: var(--confirmed);
+  background: #edf7f0;
+}
+
+.callout-yellow {
+  border-left-color: var(--pending);
+  background: #fdf8e8;
+}
+
+.callout-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+
+.callout-green .callout-title { color: var(--confirmed); }
+.callout-yellow .callout-title { color: var(--pending); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+#footer {
+  background-color: var(--primary-dark);
+  color: rgba(255, 255, 255, 0.85);
+  padding: 2.5rem 0;
+  font-size: 0.9rem;
+}
+
+#footer a {
+  color: rgba(255, 255, 255, 0.75);
+  transition: color 0.2s ease;
+}
+
+#footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+.text-primary-custom { color: var(--primary) !important; }
+.bg-primary-custom   { background-color: var(--primary) !important; }
+
+.badge-confirmed {
+  background-color: var(--confirmed);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25em 0.6em;
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+.badge-pending {
+  background-color: var(--pending);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25em 0.6em;
+  border-radius: 4px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+}
+
+/* Scroll margin for fixed navbar offset */
+section[id] {
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+
+/* ============================================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================================ */
+@media (max-width: 991px) {
+  :root {
+    --section-py: 2.5rem;
+  }
+  #navbar .navbar-collapse {
+    background-color: var(--primary-dark);
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 8px 8px;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-py: 2rem;
+  }
+  #hero {
+    min-height: 420px;
+  }
+  .hero-content {
+    padding: 3rem 1rem;
+  }
+}

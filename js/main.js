@@ -7,6 +7,24 @@
   'use strict';
 
   /* ============================================================
+     NAVBAR: Fallback toggle for mobile (in case Bootstrap JS
+     is unavailable, e.g. no internet / CDN blocked)
+     ============================================================ */
+  document.addEventListener('DOMContentLoaded', function () {
+    // Only activate fallback if Bootstrap's Collapse API is absent
+    if (typeof bootstrap === 'undefined' || !bootstrap.Collapse) {
+      var toggler = document.querySelector('.navbar-toggler');
+      var navCollapse = document.getElementById('navbarNav');
+      if (toggler && navCollapse) {
+        toggler.addEventListener('click', function () {
+          var isOpen = navCollapse.classList.toggle('show');
+          toggler.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+      }
+    }
+  });
+
+  /* ============================================================
      NAVBAR: Shrink on scroll
      ============================================================ */
   const navbar = document.getElementById('navbar');
@@ -50,8 +68,15 @@
       // Close mobile navbar if open
       const navbarCollapse = document.getElementById('navbarNav');
       if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-        if (bsCollapse) bsCollapse.hide();
+        if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+          const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (bsCollapse) bsCollapse.hide();
+        } else {
+          // Fallback: manually remove show class
+          navbarCollapse.classList.remove('show');
+          const toggler = document.querySelector('.navbar-toggler');
+          if (toggler) toggler.setAttribute('aria-expanded', 'false');
+        }
       }
 
       // Update URL hash without jumping

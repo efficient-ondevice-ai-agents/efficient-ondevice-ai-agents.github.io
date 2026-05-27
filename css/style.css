@@ -119,6 +119,18 @@ a:hover {
   font-size: 1rem;
   letter-spacing: -0.01em;
   color: #fff;
+  /* Allow brand to shrink on small screens so the toggler stays visible */
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Prevent toggler from being pushed off-screen */
+#navbar .navbar-toggler {
+  flex-shrink: 0;
+  margin-left: 0.5rem;
 }
 
 #navbar .nav-link {
@@ -225,6 +237,8 @@ a:hover {
   padding: 0.55rem 1.4rem;
   border-radius: 4px;
   transition: all 0.2s ease;
+  min-width: 160px;
+  justify-content: center;
 }
 
 .hero-buttons .btn-outline-light:hover {
@@ -491,11 +505,11 @@ a:hover {
 }
 
 /* Row type color coding */
-.row-talk    { background-color: #eef3fb; }
-.row-break   { background-color: #f4f6f9; color: var(--text-muted); }
-.row-special { background-color: #edf7f0; }
-.row-debate  { background-color: #fdf8e8; }
-.row-lunch   { background-color: #f4f6f9; color: var(--text-muted); }
+.row-talk    { background-color: #eef3fb; }           /* blue  — invited talks & debate panel */
+.row-poster  { background-color: #e8f4f8; }           /* teal  — poster sessions */
+.row-special { background-color: #edf7f0; }           /* green — contributed spotlight */
+.row-debate  { background-color: #fdf8e8; }           /* yellow — best paper award */
+.row-neutral { background-color: #f8f9fa; color: var(--text-muted); }  /* gray — opening/closing/lunch (not in legend) */
 
 /* ============================================================
    TIMELINE (Call for Papers dates)
@@ -772,11 +786,24 @@ section[id] {
   :root {
     --section-py: 2.5rem;
   }
+  /* Drop the open menu below the fixed navbar as an absolute overlay */
   #navbar .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background-color: var(--primary-dark);
     padding: 0.75rem 1rem;
     border-radius: 0 0 8px 8px;
-    margin-top: 0.5rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    z-index: 1029;
+  }
+  #navbar .navbar-collapse .nav-link {
+    padding: 0.55rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  #navbar .navbar-collapse .nav-link:last-child {
+    border-bottom: none;
   }
 }
 
@@ -789,5 +816,11 @@ section[id] {
   }
   .hero-content {
     padding: 3rem 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  #navbar .navbar-brand {
+    font-size: 0.82rem;
   }
 }

@@ -49,7 +49,7 @@
       {"@type": "Person", "name": "Davide Belli", "affiliation": "Qualcomm AI Research"},
       {"@type": "Person", "name": "Asim Munawar", "affiliation": "IBM Research"},
       {"@type": "Person", "name": "Yuanchun Li", "affiliation": "Tsinghua University"},
-      {"@type": "Person", "name": "Weiwen Liu", "affiliation": "Shanghai University"},
+      {"@type": "Person", "name": "Weiwen Liu", "affiliation": "Shanghai Jiao Tong University"},
       {"@type": "Person", "name": "Weiwei Sun", "affiliation": "Carnegie Mellon University"},
       {"@type": "Person", "name": "Ruisi Cai", "affiliation": "University of Texas at Austin"}
     ],
@@ -102,6 +102,7 @@
           <li class="nav-item"><a class="nav-link" href="#speakers">Speakers</a></li>
           <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
           <li class="nav-item"><a class="nav-link" href="#organizers">Organizers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pc">Program Committee</a></li>
         </ul>
       </div>
     </div>
@@ -379,17 +380,33 @@
           <li><strong>Format:</strong> Use the official NeurIPS 2026 LaTeX style file.</li>
         </ul>
 
-        <!-- Oral presentation callout -->
-        <div class="callout callout-green">
-          <div class="callout-title">
-            <i class="fa-solid fa-microphone-lines me-1" aria-hidden="true"></i>
-            Oral Contributed Presentations
+        <!-- Award and spotlight callout boxes -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <div class="callout callout-yellow h-100">
+              <div class="callout-title">
+                <i class="fa-solid fa-trophy me-1" aria-hidden="true"></i>
+                Best Paper Award
+              </div>
+              <p class="mb-0" style="font-size: 0.9rem;">
+                A <strong>Best Paper Award</strong> will be selected by the organizing committee
+                based on reviewer feedback and presentation quality.
+              </p>
+            </div>
           </div>
-          <p class="mb-0" style="font-size: 0.9rem;">
-            The best submissions will be invited for an <strong>oral contributed presentation</strong>
-            at the workshop. Selection is based on novelty, technical quality, and relevance
-            to the workshop's core themes.
-          </p>
+          <div class="col-md-6">
+            <div class="callout callout-green h-100">
+              <div class="callout-title">
+                <i class="fa-solid fa-microphone-lines me-1" aria-hidden="true"></i>
+                Contributed Spotlight Presentations
+              </div>
+              <p class="mb-0" style="font-size: 0.9rem;">
+                The best submissions will be invited for a <strong>contributed spotlight
+                presentation</strong> at the workshop. Selection is based on novelty,
+                technical quality, and relevance to the workshop's core themes.
+              </p>
+            </div>
+          </div>
         </div>
 
         <!-- Submit button -->
@@ -501,7 +518,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="row-talk">
+                <tr class="row-neutral">
                   <td class="time-col">09:00–09:10</td>
                   <td>Opening Remarks</td>
                 </tr>
@@ -513,7 +530,7 @@
                   <td class="time-col">09:50–10:30</td>
                   <td>Invited Talk 2</td>
                 </tr>
-                <tr class="row-break">
+                <tr class="row-neutral">
                   <td class="time-col">10:30–11:30</td>
                   <td>Coffee Break + Poster Session 1</td>
                 </tr>
@@ -521,11 +538,11 @@
                   <td class="time-col">11:30–12:10</td>
                   <td>Invited Talk 3</td>
                 </tr>
-                <tr class="row-special">
+                <tr class="row-debate">
                   <td class="time-col">12:10–12:30</td>
-                  <td><strong>"Open Problems" Lightning Round</strong></td>
+                  <td><strong>Best Paper Award Presentation</strong></td>
                 </tr>
-                <tr class="row-lunch">
+                <tr class="row-neutral">
                   <td class="time-col">12:30–13:30</td>
                   <td>Lunch Break</td>
                 </tr>
@@ -550,11 +567,11 @@
                   <td class="time-col">13:30–14:10</td>
                   <td>Invited Talk 4</td>
                 </tr>
-                <tr class="row-talk">
+                <tr class="row-special">
                   <td class="time-col">14:10–15:10</td>
-                  <td>Contributed Spotlight Talks <span style="color: var(--text-muted); font-size: 0.85em;">(6 × 10 min)</span></td>
+                  <td><strong>Contributed Spotlight Talks</strong> <span style="color: var(--text-muted); font-size: 0.85em;">(6 × 10 min)</span></td>
                 </tr>
-                <tr class="row-break">
+                <tr class="row-neutral">
                   <td class="time-col">15:10–16:10</td>
                   <td>Coffee Break + Poster Session 2</td>
                 </tr>
@@ -562,11 +579,11 @@
                   <td class="time-col">16:10–16:50</td>
                   <td>Invited Talk 5</td>
                 </tr>
-                <tr class="row-debate">
+                <tr class="row-talk">
                   <td class="time-col">16:50–17:20</td>
                   <td><strong>Structured Debate Panel</strong></td>
                 </tr>
-                <tr class="row-talk">
+                <tr class="row-neutral">
                   <td class="time-col">17:20–17:30</td>
                   <td>Closing Remarks</td>
                 </tr>
@@ -576,35 +593,13 @@
 
         </div>
 
-        <!-- Unique format callout boxes -->
-        <div class="row g-3 mt-2">
-          <div class="col-md-6">
-            <div class="callout callout-green">
-              <div class="callout-title">
-                <i class="fa-solid fa-bolt me-1" aria-hidden="true"></i>
-                "Open Problems" Lightning Round
-              </div>
-              <p class="mb-0" style="font-size: 0.9rem;">
-                Five 4-minute talks presenting <em>unsolved problems</em> — not solutions.
-                Speakers are invited to articulate the hardest open questions in efficient
-                on-device agentic AI, sparking discussion and future collaboration.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="callout callout-yellow">
-              <div class="callout-title">
-                <i class="fa-solid fa-comments me-1" aria-hidden="true"></i>
-                Structured Debate Panel
-              </div>
-              <p class="mb-0" style="font-size: 0.9rem;">
-                Two teams argue opposing positions on a central question in the field
-                (e.g., "On-device agents will surpass cloud agents within 5 years").
-                A structured format with opening statements, rebuttals, and audience vote.
-              </p>
-            </div>
-          </div>
+        <!-- Color legend -->
+        <div class="d-flex flex-wrap gap-3 mb-3 mt-2" style="font-size: 0.82rem; color: var(--text-muted);">
+          <span><span style="display:inline-block;width:14px;height:14px;background:#eef3fb;border:1px solid #c5d5ef;border-radius:3px;vertical-align:middle;margin-right:4px;"></span>Invited Talks &amp; Debate Panel</span>
+          <span><span style="display:inline-block;width:14px;height:14px;background:#edf7f0;border:1px solid #a8d5b5;border-radius:3px;vertical-align:middle;margin-right:4px;"></span>Contributed Spotlight Presentations</span>
+          <span><span style="display:inline-block;width:14px;height:14px;background:#fdf8e8;border:1px solid #e0cc80;border-radius:3px;vertical-align:middle;margin-right:4px;"></span>Best Paper Award</span>
         </div>
+
 
       </div>
     </section>
@@ -656,10 +651,10 @@
               <div class="person-affil">IBM Research, US</div>
               <div class="person-role">Team Lead, Agentic AI</div>
               <p class="person-bio">
-                Research scientist at IBM Research specializing in machine learning,
-                neuro-symbolic AI, and reinforcement learning. His work focuses on
-                enterprise-grade agentic AI systems, including contributions to the
-                Granite model family and neuro-symbolic reasoning frameworks.
+                Technical Lead for Agentic AI at IBM Research. His research spans large
+                language model agents, enterprise AI deployment, and efficient inference
+                systems, with contributions to the Granite model family and IBM's agentic
+                AI platform.
               </p>
               <div class="person-links">
                 <a href="https://scholar.google.co.jp/citations?user=avAL9xYAAAAJ&hl=en"
@@ -682,10 +677,10 @@
               <div class="person-affil">Tsinghua University, China</div>
               <div class="person-role">Assistant Professor</div>
               <p class="person-bio">
-                Assistant Professor at the Institute for AI Industry Research (AIR), Tsinghua
-                University, specializing in mobile computing and on-device AI. His research
-                on resource-efficient LLMs — including LLM-Explorer and BudgetThinker —
-                addresses deploying capable language models on constrained hardware.
+                Assistant Professor at Tsinghua University. His research focuses on on-device
+                AI agents, resource-efficient large language models, and intelligent mobile
+                systems, with contributions to premier academic conferences and industry
+                white papers on mobile AI systems.
               </p>
               <div class="person-links">
                 <a href="https://scholar.google.com/citations?hl=en&user=B3hg7BgAAAAJ"
@@ -705,13 +700,13 @@
                    class="person-photo"
                    width="120" height="120">
               <div class="person-name">Weiwen Liu</div>
-              <div class="person-affil">Shanghai University, China</div>
+              <div class="person-affil">Shanghai Jiao Tong University, China</div>
               <div class="person-role">Associate Professor</div>
               <p class="person-bio">
-                Associate Professor at Shanghai University working on large language models,
-                AI agents, and recommender systems. Her research on tool-augmented agents —
-                including Tool-ACE and ACEBench — advances function calling and tool use
-                for LLM-based agents.
+                Associate Professor at Shanghai Jiao Tong University, with prior industry
+                experience at Huawei Noah's Ark Lab. Her research focuses on post-training
+                and reinforcement learning of AI agents, tool learning, and multi-agent
+                collaboration, with contributions including ToolACE and ACEBench.
               </p>
               <div class="person-links">
                 <a href="https://scholar.google.com/citations?hl=en&user=C7UzRGgAAAAJ"
@@ -734,10 +729,10 @@
               <div class="person-affil">Carnegie Mellon University, US</div>
               <div class="person-role">PhD Student</div>
               <p class="person-bio">
-                PhD student at Carnegie Mellon University working on machine learning,
-                information retrieval, and natural language processing, with a focus on
-                long-horizon agentic systems. His research on context folding enables agents
-                to reason efficiently over extended interaction histories.
+                PhD student at Carnegie Mellon University. His research focuses on
+                long-horizon reasoning agents, context folding for efficient multi-turn
+                interactions, and human-agent collaboration, with a focus on making agents
+                that can reason over extended horizons without prohibitive compute costs.
               </p>
               <div class="person-links">
                 <a href="https://scholar.google.com/citations?hl=en&user=hdUZbxgAAAAJ"
@@ -760,10 +755,10 @@
               <div class="person-affil">University of Texas at Austin, US</div>
               <div class="person-role">PhD Student</div>
               <p class="person-bio">
-                PhD student at the University of Texas at Austin working on machine learning,
-                computer vision, and efficient inference for large language models. Her
-                research on structured pruning, quantization, and compression targets
-                deployment of LLMs and agentic systems under real-world resource constraints.
+                PhD student at the University of Texas at Austin, advised by Prof. Atlas Wang.
+                Her research focuses on LLM efficiency, model compression, and efficient
+                inference, with multiple publications on pruning, quantization, and efficient
+                training of large language models.
               </p>
               <div class="person-links">
                 <a href="https://scholar.google.com/citations?hl=en&user=B0chY1AAAAAJ"
@@ -786,8 +781,20 @@
       <div class="container">
         <h2 id="pc-heading" class="section-title">Program Committee</h2>
         <p class="section-subtitle">
-          We thank the following researchers for serving on the program committee.
+          We thank the following researchers who have agreed to serve on the program committee.
         </p>
+
+        <!-- Call for reviewers -->
+        <div class="callout mb-4">
+          <div class="callout-title">
+            <i class="fa-solid fa-magnifying-glass me-1" aria-hidden="true"></i>
+            Call for Reviewers
+          </div>
+          <p class="mb-0" style="font-size: 0.9rem;">
+            We are also looking for additional reviewers. If you are interested in reviewing
+            for this workshop, please <a href="#">sign up here</a> (link coming soon).
+          </p>
+        </div>
 
         <div class="pc-grid" role="list" aria-label="Program committee members">
 
@@ -854,6 +861,86 @@
           <div class="pc-pill" role="listitem">
             <span class="pc-name">Victor Conchello Vendrell</span>
             <span class="pc-affil">Qualcomm AI Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Jiaqi Liu</span>
+            <span class="pc-affil">Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Kangning Zhang</span>
+            <span class="pc-affil">Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Shuai Shao</span>
+            <span class="pc-affil">Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Congmin Zheng</span>
+            <span class="pc-affil">Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Yuanyi Song</span>
+            <span class="pc-affil">Shanghai Jiao Tong University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Hao Wen</span>
+            <span class="pc-affil">Tsinghua University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Xiangyu Li</span>
+            <span class="pc-affil">Tsinghua University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Shizuo Tian</span>
+            <span class="pc-affil">Tsinghua University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Yizhen Yuan</span>
+            <span class="pc-affil">Tsinghua University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Guohong Liu</span>
+            <span class="pc-affil">Tsinghua University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Jiacheng Liu</span>
+            <span class="pc-affil">Peking University</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Rui Kong</span>
+            <span class="pc-affil">Baidu</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Yiliu Chen</span>
+            <span class="pc-affil">ByteDance</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Shriti Priya</span>
+            <span class="pc-affil">IBM Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Kinjal Basu</span>
+            <span class="pc-affil">IBM Research</span>
+          </div>
+
+          <div class="pc-pill" role="listitem">
+            <span class="pc-name">Sharath</span>
+            <span class="pc-affil">IBM Research</span>
           </div>
 
         </div>

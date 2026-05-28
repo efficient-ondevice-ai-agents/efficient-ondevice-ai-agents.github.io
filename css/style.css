@@ -237,8 +237,10 @@ a:hover {
   padding: 0.55rem 1.4rem;
   border-radius: 4px;
   transition: all 0.2s ease;
-  min-width: 160px;
+  width: 200px;
+  white-space: nowrap;
   justify-content: center;
+  text-align: center;
 }
 
 .hero-buttons .btn-outline-light:hover {

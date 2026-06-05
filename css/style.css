@@ -334,6 +334,10 @@ a:hover {
   height: 100%;
   box-shadow: var(--card-shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Flex column so the links row can be pinned to the bottom,
+     keeping Scholar/Homepage buttons aligned across all cards. */
+  display: flex;
+  flex-direction: column;
 }
 
 .person-card:hover {
@@ -404,10 +408,16 @@ a:hover {
   color: var(--text);
   text-align: left;
   line-height: 1.6;
+  /* Grow to fill remaining height so the links row is pushed to the
+     bottom of the card, keeping buttons aligned across all cards. */
+  flex: 1 0 auto;
 }
 
 .person-links {
-  margin-top: 0.75rem;
+  /* margin-top:auto pins this row to the bottom of the flex column,
+     so Scholar/Homepage buttons align across cards of differing height. */
+  margin-top: auto;
+  padding-top: 0.75rem;
   display: flex;
   justify-content: center;
   gap: 0.75rem;

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://efficient-ondevice-ai-agents.github.io/sitemap.xml
